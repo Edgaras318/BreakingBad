@@ -1,0 +1,145 @@
+@import "@/assets/styles/_character";
+
+/* Character-more */
+.character-more {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: auto;
+
+  &__button {
+    @extend .character__button;
+    color: #fff;
+  }
+
+  &:hover &__button {
+    transform: translateX(15px);
+  }
+
+  &__img {
+    @extend .character__img;
+    width: 320px;
+    height: 300px;
+  }
+
+  &__label {
+    @extend .character__label;
+  }
+
+  &__title {
+    @extend .character__title;
+  }
+}
+
+/* Character-more-wrapper */
+.character-more-wrapper {
+  width: 320px;
+  margin: auto;
+  color: #fff;
+}
+
+/* View-character */
+.view-character {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 20px 0;
+
+  &__label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: blue;
+    padding-top: 15px;
+  }
+
+  &__text {
+    font-family: Teko-Light;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: 0 0;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* View-character-info-wrapper */
+.view-character-info-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #f4f5f6;
+}
+
+/* More-char-container */
+.more-char-container {
+  background: black;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  &__text {
+    font-family: Teko-Regular;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 50px;
+  }
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+
+/* View-character */
+  .view-character {
+    flex-direction: row;
+    &__img {
+      height: 628px;
+      width: 50%;
+    }
+  }
+
+/* View-character-info-wrapper */
+  .view-character-info-wrapper {
+    width: 50%;
+  }
+
+/* Character-more-wrapper */
+  .character-more-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  
+/* Character-more */
+  .character-more {
+    width: 40%;
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+/* Character-more-wrapper */
+  .character-more-wrapper {
+    width: 100%;
+  }
+
+/* Character-more */
+  .character-more {
+    width: 320px;
+    &__img {
+      width: 300px;
+    }
+
+  }
+}

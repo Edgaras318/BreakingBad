@@ -1,0 +1,87 @@
+@import "@/assets/styles/_variables.scss";
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 3;
+  transition: 300ms;
+
+  &__logo {
+    object-fit: contain;
+    height: 14px;
+  }
+
+  &--on-scroll {
+    background-color: rgba(24, 23, 23, 0.699);
+  }
+}
+
+/* Menu-button */
+.menu-button {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  padding: 10px;
+  cursor: pointer;
+
+  &__bar1,
+  &__bar2 {
+    width: 20px;
+    height: 2px;
+    background-color: $secondary-color;
+    margin: 6px 0;
+    transition: 0.4s;
+
+    &--change {
+      transform: rotate(-45deg) translate(-6px, 6px);
+      background-color: #fff;
+    }
+    &--change2 {
+      transform: rotate(45deg) translate(0px, 0px);
+      background-color: #fff;
+    }
+  }
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+  .menu {
+    padding-top: 40px;
+    transition: all 300ms ease-in;
+
+    &__logo {
+      height: 20px;
+    }
+
+    &--on-scroll {
+      padding-top: 20px;
+      border-bottom: none;
+    }
+
+    &--on-scroll &__logo {
+      height: 14px;
+    }
+
+    &--on-scroll .menu-button {
+      top: -1px;
+      right: 5px;
+    }
+
+    &--open {
+      border-bottom: none;
+    }
+  }
+
+  /* Menu-button */
+  .menu-button {
+    top: 13px;
+    right: 10px;
+    transition: all 500ms ease-in;
+  }
+}

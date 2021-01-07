@@ -1,0 +1,89 @@
+@import "@/assets/styles/_variables.scss";
+
+/* Character-header */
+.character-header {
+  &__img-container {
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: -393px 0px;
+    height: 370px;
+  }
+
+  &__button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    color: $secondary-color;
+    height: 50px;
+    width: 100%;
+    margin-bottom: $margin-bottom;
+    cursor: pointer;
+  }
+}
+
+/* Before-enter */
+.before-enter {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 1s ease-out;
+}
+
+/* Enter */
+.enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+
+  /* Character-header */
+  .character-header {
+    &__img-container {
+      height: 370px;
+      margin-bottom: 50px;
+    }
+
+    &__img {
+      object-position: -162px 0px;
+      width: 119%;
+    }
+
+    &_button {
+      position: absolute;
+      top: 483px;
+      right: 86px;
+      width: 170px;
+    }
+  }
+}
+
+/* Big landscape tablets, laptops, and desktops */
+@media (min-width: 1025px) {
+
+  /* Character-header */
+  .character-header {
+    &__img {
+      object-position: -151px -76px;
+      height: 500px;
+    }
+
+    &__title {
+      font-size: 301px;
+      top: 4vw;
+      left: 62vw;
+    }
+
+    &__img-container {
+      height: 500px;
+      margin-bottom: 50px;
+    }
+  }
+}

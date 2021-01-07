@@ -1,0 +1,30 @@
+@import "@/assets/styles/_view-character.scss";
+
+/* Button-w */
+.button-w {
+  text-align: center;
+}
+
+/* Random-button */
+.random-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+
+  /* Random-button */
+  .random-button {
+    width: 40%;
+  }
+
+}

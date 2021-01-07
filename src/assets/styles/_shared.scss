@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: Teko-Light;
+  src: url(~@/assets/Fonts/Teko/Teko-Light.ttf);
+}
+
+@font-face {
+  font-family: Teko-Regular;
+  src: url(~@/assets/Fonts/Teko/Teko-Regular.ttf);
+}
+
+@font-face {
+  font-family: Teko-Bold;
+  src: url(~@/assets/Fonts/Teko/Teko-Bold.ttf);
+}
+
+@font-face {
+  font-family: Teko-Medium;
+  src: url(~@/assets/Fonts/Teko/Teko-Medium.ttf);
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.c-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
