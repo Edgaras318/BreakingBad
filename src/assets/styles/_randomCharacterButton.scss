@@ -1,5 +1,3 @@
-@import "@/assets/styles/_view-character.scss";
-
 /* Button-w */
 .button-w {
   text-align: center;
@@ -21,10 +19,8 @@
 
 /* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 @media (min-width: 600px) {
-
   /* Random-button */
   .random-button {
     width: 40%;
   }
-
 }

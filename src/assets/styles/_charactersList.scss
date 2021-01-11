@@ -1,0 +1,37 @@
+/* Character-container */
+.character-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+/* Character */
+.character {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+  /* Character-container */
+  .character-container {
+    padding: 0 20px;
+    max-width: 780px;
+    margin: auto;
+  }
+
+  /* C-padding */
+  .c-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Character-container */
+  .character-container {
+    max-width: 1200px;
+  }
+}

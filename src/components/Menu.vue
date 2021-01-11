@@ -3,8 +3,8 @@
     <div
       class="menu"
       :class="[
-        { 'menu--on-scroll': scrollMenu && !showNavbar },
-        { 'menu--open': showNavbar }
+        { 'menu--on-scroll': scrollMenu && !showMenuList },
+        { 'menu--open': showMenuList },
       ]"
     >
       <div @click="toggleMenu" class="menu-button">
@@ -14,22 +14,22 @@
       <!-- / menu-button -->
     </div>
     <!-- / menu -->
-    <Navbar @toggleMenu="toggleMenu" :showNavbar="showNavbar" />
+    <MenuList @toggleMenu="toggleMenu" :showMenuList="showMenuList" />
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
+import MenuList from "@/components/MenuList";
 
 export default {
   name: "Menu",
   components: {
-    Navbar
+    MenuList,
   },
   data() {
     return {
       scrollMenu: false,
-      showNavbar: false
+      showMenuList: false,
     };
   },
   mounted() {
@@ -46,10 +46,10 @@ export default {
       document
         .querySelector(".menu-button__bar2")
         .classList.toggle("menu-button__bar2--change2");
-      if (this.showNavbar) {
-        this.showNavbar = false;
+      if (this.showMenuList) {
+        this.showMenuList = false;
       } else {
-        this.showNavbar = true;
+        this.showMenuList = true;
       }
     },
     onScroll() {
@@ -58,8 +58,8 @@ export default {
       } else {
         this.scrollMenu = false;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 @import "@/assets/styles/_variables.scss";
 
-/* Navbar */
-.navbar {
+/* MenuList */
+.menuList {
   padding: 120px 20px;
   line-height: 1.2;
   transform: translateX(0);
@@ -54,8 +54,8 @@
   }
 }
 
-/* Navbar-divider */
-.navbar-divider {
+/* MenuList-divider */
+.menuList-divider {
   border-bottom: 1px solid #5e5e5e;
   display: flex;
   justify-content: flex-end;
@@ -88,9 +88,8 @@
 
 /* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 @media (min-width: 600px) {
-
-  /* Navbar */
-  .navbar {
+  /* MenuList */
+  .menuList {
     &__item {
       font-size: 80px;
     }
@@ -101,22 +100,21 @@
     }
   }
 
-  /* Navbar-divider */
-  .navbar-divider {
+  /* MenuList-divider */
+  .menuList-divider {
     height: 78px;
   }
 }
 
 /* Big landscape tablets, laptops, and desktops */
 @media (min-width: 1025px) {
-
-  /* Navbar[-divider */
-  .navbar-divider {
+  /* MenuList[-divider */
+  .menuList-divider {
     height: 69px;
   }
 
-  /* Navbar */
-  .navbar {
+  /* MenuList */
+  .menuList {
     &__item {
       font-size: 70px;
     }

@@ -1,5 +1,10 @@
 @import "@/assets/styles/_variables.scss";
 
+.c-padding {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
 /* Footer */
 .footer {
   background-color: $primary-color;

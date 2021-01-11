@@ -9,22 +9,13 @@
           alt=""
         />
         <nav class="footer-nav">
-          <li>
-            <router-link class="footer-nav__item" :to="{ name: 'Home' }"
-              >Home</router-link
-            >
-          </li>
-          <li>
-            <router-link class="footer-nav__item" :to="{ name: 'Random' }"
-              >Random</router-link
-            >
-          </li>
-          <li>
-            <router-link class="footer-nav__item" :to="{ name: 'Categories' }"
-              >Categories</router-link
-            >
+          <li v-for="item in menuListData" :key="item.id">
+            <router-link class="footer-nav__item" :to="item.route">{{
+              item.text
+            }}</router-link>
           </li>
         </nav>
+
         <div class="footer-icons">
           <img
             class="footer-icons__img"
@@ -83,8 +74,15 @@
 </template>
 
 <script>
+import MenuListData from "@/Data/MenuListData";
+
 export default {
-  name: "footerr",
+  name: "TheFooter",
+  data() {
+    return {
+      menuListData: MenuListData,
+    };
+  },
   methods: {
     scrollTop() {
       if (document.scrollingElement.scrollTop === 0) return;
@@ -105,11 +103,11 @@ export default {
         window.requestAnimationFrame(step);
       }
       window.requestAnimationFrame(step);
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style lang="scss">
-@import "@/assets/styles/_footer.scss";
+<style lang="scss" scoped>
+@import "@/assets/styles/_theFooter.scss";
 </style>

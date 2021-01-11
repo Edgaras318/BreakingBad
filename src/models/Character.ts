@@ -1,7 +1,7 @@
 export interface CharacterInterface {
   readonly char_id: number;
   readonly name: string;
-  readonly birthday?: string;
+  readonly birthday?: string | null;
   readonly occupation: string[] | null;
   readonly img: string;
   readonly status: string;
@@ -16,7 +16,7 @@ export class Character implements CharacterInterface {
   constructor(
     readonly char_id: number,
     readonly name: string,
-    readonly birthday: string,
+    readonly birthday: string | null,
     readonly occupation: string[] | null,
     readonly img: string,
     readonly status: string,

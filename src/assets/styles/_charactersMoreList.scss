@@ -1,0 +1,52 @@
+.more-char-list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 280px;
+  color: #fff;
+}
+
+a {
+  width: 280px;
+}
+
+/* More-char-container */
+.more-char-container {
+  background: black;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  &__text {
+    font-family: Teko-Regular;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 50px;
+  }
+  &__divider {
+    margin-bottom: 20px;
+  }
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+  .more-char-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    color: #fff;
+  }
+  a {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+  .more-char-list {
+    .character__img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}

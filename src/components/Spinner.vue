@@ -4,11 +4,11 @@
 
 <script lang="ts">
 export default {
-  name: "Spinner"
+  name: "Spinner",
 };
 </script>
 
-<style>
+<style scoped>
 .spinner {
   width: 200px;
   margin: auto;
