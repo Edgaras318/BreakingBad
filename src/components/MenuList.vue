@@ -1,5 +1,5 @@
 <template>
-  <nav class="menuList" ref="menuList">
+  <ul class="menuList" ref="menuList">
     <li class="menuList-divider" v-for="item in menuListData" :key="item.id">
       <router-link
         class="menuList__item"
@@ -7,12 +7,16 @@
         :to="item.route"
       >
         <span class="menuList__text" @click="toggleMenu">
-          <img class="menuList__icon" src="@/assets/icons/menu-triangle.svg" />
+          <img
+            class="menuList__icon"
+            alt="triangle"
+            src="@/assets/icons/menu-triangle.svg"
+          />
           {{ item.text }}
         </span>
       </router-link>
     </li>
-  </nav>
+  </ul>
   <!-- / menuList -->
 </template>
 

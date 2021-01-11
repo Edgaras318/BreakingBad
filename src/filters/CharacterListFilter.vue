@@ -1,8 +1,8 @@
 <template>
   <div class="sort-group-container c-padding">
     <div class="sort-container">
-      <span class="sort-container__title">Sort by</span>
       <div>
+        <label for="sort" class="sort-container__title">Sort by</label>
         <span class="sort-container__placeholder">
           {{ selectedPlaceholder }}</span
         >
@@ -11,7 +11,11 @@
           alt=""
           class="sort-container__icon"
         />
-        <select v-model="selectedPlaceholder" class="sort-container__select">
+        <select
+          id="sort"
+          v-model="selectedPlaceholder"
+          class="sort-container__select"
+        >
           <option value="name">name</option>
           <option value="alive">alive</option>
         </select>
