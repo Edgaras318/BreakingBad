@@ -45,6 +45,4 @@ class CharactersService {
     }
 }
 
-//const charactersService = new CharactersService();
-
 export default CharactersService;
