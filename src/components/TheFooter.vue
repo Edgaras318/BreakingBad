@@ -8,14 +8,14 @@
           src="@/assets/Logo/Breaking_Bad_logo.svg.png"
           alt=""
         />
-        <nav class="footer-nav">
+        <ul class="footer-nav">
           <li v-for="item in menuListData" :key="item.id">
             <router-link class="footer-nav__item" :to="item.route">{{
               item.text
             }}</router-link>
           </li>
-        </nav>
-
+        </ul>
+        <!-- / footer-nav -->
         <div class="footer-icons">
           <img
             class="footer-icons__img"
@@ -33,6 +33,7 @@
             alt="instagram"
           />
         </div>
+        <!-- / footer-icons -->
       </div>
       <!-- / footer-top -->
       <hr class="footer__divider" />
@@ -49,7 +50,7 @@
             >Terms and conditions</span
           >
         </div>
-        <!-- / footer-bottom -->
+        <!-- / footer-bottom-middle -->
         <div class="footer-copyright-wrapper">
           <span class="footer-bottom__copyright"
             >&copy; 2020 Edgaras Spiridonovas</span
@@ -57,6 +58,7 @@
         </div>
         <!-- / footer-copyright-wrapper -->
       </div>
+      <!-- / footer-bottom -->
     </footer>
     <!-- / footer -->
     <div @click="scrollTop" class="arrow-container">

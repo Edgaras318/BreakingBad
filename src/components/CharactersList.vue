@@ -14,6 +14,7 @@
         <CharacterTemplate :character="character" />
       </article>
     </section>
+    <!-- / character-container -->
   </div>
 </template>
 

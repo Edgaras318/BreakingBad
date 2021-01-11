@@ -7,8 +7,8 @@
         alt="character header image"
       />
     </div>
-    <!-- / the-header -->
   </div>
+  <!-- / the-header -->
 </template>
 
 <script>

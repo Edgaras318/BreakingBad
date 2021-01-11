@@ -13,6 +13,7 @@
       <img src="@/assets/icons/blue-arrow.svg" alt="" />
       <span class="character__button">View character</span>
     </div>
+    <!-- / viewcase-container -->
   </router-link>
 </template>
 

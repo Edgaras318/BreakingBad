@@ -5,6 +5,7 @@
     <div class="spinner" v-if="!charactersByCategory.length">
       <Spinner />
     </div>
+    <!-- spinner -->
     <div class="more-char-wrapper">
       <article
         else
@@ -17,7 +18,9 @@
         <CharacterTemplate :character="characterByCategory" />
       </article>
     </div>
+    <!-- / more-char-wrapper -->
   </section>
+  <!-- / more-char-container -->
 </template>
 
 <script>
