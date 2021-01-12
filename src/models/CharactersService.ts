@@ -32,9 +32,20 @@ class CharactersService {
           )[0]
         );
   }
-    static async getCharactersByCategory(category: string): Promise<Character[]> {
+    static async getThreeCharactersByCategory(category: string): Promise<Character[]> {
       return fetch(
         `${api}/characters?category=${category}&limit=3&offset=1`
+      )
+        .then((res) => res.json())
+        .then((res) =>
+          res.map(
+            (character: CharacterInterface) => character as CharacterInterface
+          )
+        );
+  }
+    static async getTenCharactersByCategory(category: string): Promise<Character[]> {
+      return fetch(
+        `${api}/characters?category=${category}&limit=10`
       )
         .then((res) => res.json())
         .then((res) =>

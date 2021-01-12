@@ -24,7 +24,7 @@
 import MenuListData from "@/Data/MenuListData.js";
 
 export default {
-  name: "MenuList",
+  name: "TheMenuList",
   props: ["showMenuList"],
   data() {
     return {

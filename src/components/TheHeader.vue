@@ -1,5 +1,5 @@
 <template>
-  <div class="the-header">
+  <header class="the-header">
     <div class="the-header__img-container">
       <img
         class="the-header__img"
@@ -7,7 +7,7 @@
         alt="character header image"
       />
     </div>
-  </div>
+  </header>
   <!-- / the-header -->
 </template>
 

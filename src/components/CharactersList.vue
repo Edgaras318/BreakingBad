@@ -19,29 +19,23 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { CharacterInterface } from "@/models/Character";
-import CharactersService from "@/models/CharactersService";
 import CharacterListFilter from "@/filters/CharacterListFilter.vue";
 import Spinner from "@/components/Spinner.vue";
 import CharacterTemplate from "@/components/CharacterTemplate.vue";
 
-export default Vue.extend({
+export default {
   name: "CharactersList",
+  props: {
+    characters: {
+      type: Array,
+    },
+  },
   components: {
     CharacterListFilter,
     Spinner,
     CharacterTemplate,
   },
-  data() {
-    return {
-      characters: [] as CharacterInterface[],
-    };
-  },
-  async mounted() {
-    this.characters = await CharactersService.getTenCharacters();
-  },
-});
+};
 </script>
 
 <style lang="scss" scoped>

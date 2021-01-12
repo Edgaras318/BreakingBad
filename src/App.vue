@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheHeader />
-    <Menu />
+    <TheMenu />
     <div class="main">
       <router-view />
     </div>
@@ -11,14 +11,14 @@
 
 <script>
 import TheFooter from "@/components/TheFooter";
-import Menu from "@/components/Menu";
+import TheMenu from "@/components/TheMenu";
 import TheHeader from "@/components/TheHeader.vue";
 
 export default {
   name: "App",
   components: {
     TheFooter,
-    Menu,
+    TheMenu,
     TheHeader,
   },
 };

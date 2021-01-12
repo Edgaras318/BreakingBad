@@ -1,17 +1,21 @@
 <template>
   <article class="character-info">
-    <img class="character-info__img" :src="character.img" />
+    <img
+      class="character-info__img"
+      :alt="character.name"
+      :src="character.img"
+    />
     <div class="character-info-wrapper">
       <p class="character-info__label">Name:</p>
       <p class="character-info__text">{{ character.name }}</p>
       <p class="character-info__label">Birthday:</p>
       <p
         class="character-info__text"
-        v-if="character.birthday === 'Unknown' || null"
+        v-if="character.birthday === null || character.birthday === 'Unknown'"
       >
         Unknown
       </p>
-      <p class="character-info__text" v-else>
+      <p v-else class="character-info__text">
         {{ character.birthday | formatDate }}
       </p>
       <p class="character-info__label">Nickname:</p>

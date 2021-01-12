@@ -14,17 +14,17 @@
       <!-- / menu-button -->
     </div>
     <!-- / menu -->
-    <MenuList @toggleMenu="toggleMenu" :showMenuList="showMenuList" />
+    <TheMenuList @toggleMenu="toggleMenu" :showMenuList="showMenuList" />
   </div>
 </template>
 
 <script>
-import MenuList from "@/components/MenuList";
+import TheMenuList from "@/components/TheMenuList";
 
 export default {
   name: "Menu",
   components: {
-    MenuList,
+    TheMenuList,
   },
   data() {
     return {

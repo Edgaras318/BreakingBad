@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import CharactersService from "@/models/CharactersService";
-import { CharacterInterface, Character } from "@/models/Character";
+import { CharacterInterface } from "@/models/Character";
 import Vue from "vue";
 import Spinner from "@/components/Spinner.vue";
 import moment from "moment";
@@ -58,7 +58,7 @@ export default Vue.extend({
   },
   watch: {
     async character() {
-      this.charactersByCategory = await CharactersService.getCharactersByCategory(
+      this.charactersByCategory = await CharactersService.getThreeCharactersByCategory(
         this.character.category
       );
     },
