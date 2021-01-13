@@ -93,7 +93,7 @@ export default {
       let scrollCount = 0,
         oldTimestamp = null;
 
-      function step(newTimestamp) {
+      const step = (newTimestamp) => {
         if (oldTimestamp !== null) {
           scrollCount += (Math.PI * (newTimestamp - oldTimestamp)) / 900;
           if (scrollCount >= Math.PI)
@@ -103,7 +103,7 @@ export default {
         }
         oldTimestamp = newTimestamp;
         window.requestAnimationFrame(step);
-      }
+      };
       window.requestAnimationFrame(step);
     },
   },

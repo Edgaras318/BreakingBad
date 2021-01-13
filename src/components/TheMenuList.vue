@@ -41,7 +41,7 @@ export default {
     },
   },
   watch: {
-    showMenuList: function(open) {
+    showMenuList(open) {
       if (open) {
         this.changeOpenState("add");
       } else {
