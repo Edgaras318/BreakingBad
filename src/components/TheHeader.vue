@@ -3,7 +3,7 @@
     <div class="the-header__img-container">
       <img
         class="the-header__img"
-        src="@/assets/breaking-bad-header.jpeg"
+        src="@/assets/breaking-bad-header.webp"
         alt="character header image"
       />
     </div>

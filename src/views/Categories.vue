@@ -6,13 +6,13 @@
         <img
           @click="selectCategory('Breaking bad')"
           class="categories-container__button"
-          src="@/assets/CategoryIcons/breaking-bad-icon.jpg"
+          src="@/assets/CategoryIcons/breaking-bad-icon.webp"
           alt="BreakingbadIcon"
         />
         <img
           @click="selectCategory('Better Call Saul')"
           class="categories-container__button"
-          src="@/assets/CategoryIcons/BetterCallSaulCategoryIcon.png"
+          src="@/assets/CategoryIcons/BetterCallSaulCategoryIcon.webp"
           alt="BetterCallSaulCategoryIcon"
         />
       </div>
