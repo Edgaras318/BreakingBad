@@ -20,10 +20,12 @@
       </p>
       <p class="character-info__label">Nickname:</p>
       <p class="character-info__text">{{ character.nickname }}</p>
+
       <p class="character-info__label">Status:</p>
       <p class="character-info__text">{{ character.status }}</p>
+
       <p class="character-info__label">Occupation:</p>
-      <div class="character-info__list">
+      <div v-if="character.occupation !== null" class="character-info__list">
         <p
           class="character-info__text"
           v-for="(occup, index) in character.occupation"
@@ -32,8 +34,10 @@
           {{ occup }},
         </p>
       </div>
+      <p class="character-info__text" v-else>None</p>
+
       <p class="character-info__label">Appearance:</p>
-      <div class="character-info__list">
+      <div v-if="character.appearance !== null" class="character-info__list">
         <p
           class="character-info__text"
           v-for="(appear, index) in character.appearance"
@@ -42,16 +46,23 @@
           {{ appear }},
         </p>
       </div>
-      <p class="character-info__label">Better Call Saul Appearance:</p>
-      <div class="character-info__list">
-        <p
-          class="character-info__text"
-          v-for="(bcsAppear, index) in character.better_call_saul_appearance"
-          :key="'bcsAppear' + index"
-        >
-          {{ bcsAppear }}
-        </p>
-      </div>
+      <p class="character-info__text" v-else>
+        None
+      </p>
+
+      <p class="character-info__label">
+        Better Call Saul Appearance:
+      </p>
+      <p
+        v-if="character.better_call_saul_appearance !== null"
+        class="character-info__text"
+      >
+        {{ character.better_call_saul_appearance }}
+      </p>
+      <p v-else class="character-info__text">
+        None
+      </p>
+
       <p class="character-info__label">Portrayed:</p>
       <p class="character-info__text">{{ character.portrayed }}</p>
       <p class="character-info__label">Category:</p>
