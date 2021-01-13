@@ -19,7 +19,10 @@
       <!-- / categories-images-wrapper -->
     </section>
     <!-- / categories-container -->
-    <CharactersList :characters="charactersByCategory" />
+    <div v-if="loading">
+      <TheSpinner />
+    </div>
+    <div v-else><CharactersList :characters="charactersByCategory" /></div>
   </div>
 </template>
 
@@ -28,34 +31,40 @@ import CharactersService from "@/models/CharactersService";
 import { CharacterInterface, Character } from "@/models/Character";
 import CharactersList from "@/components/CharactersList.vue";
 import Vue from "vue";
+import TheSpinner from "@/components/TheSpinner.vue";
 
 export default Vue.extend({
   name: "Categories",
   components: {
     CharactersList,
+    TheSpinner,
   },
   data() {
     return {
       charactersByCategory: [] as CharacterInterface[],
       category: "Breaking bad",
+      loading: true,
     };
   },
   methods: {
     selectCategory(category: string) {
       this.category = category;
     },
-  },
-  watch: {
-    async category() {
+    async getTenCharactersByCategory() {
       this.charactersByCategory = await CharactersService.getTenCharactersByCategory(
         this.category
       );
+      this.loading = false;
     },
   },
-  async mounted() {
-    this.charactersByCategory = await CharactersService.getTenCharactersByCategory(
-      this.category
-    );
+  watch: {
+    category() {
+      this.loading = true;
+      this.getTenCharactersByCategory();
+    },
+  },
+  mounted() {
+    this.getTenCharactersByCategory();
   },
 });
 </script>

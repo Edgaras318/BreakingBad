@@ -2,9 +2,6 @@
   <section class="more-char-container">
     <h1 class="more-char-container__text">More characters</h1>
     <hr class="more-char-container__divider" />
-    <div class="spinner" v-if="!charactersByCategory.length">
-      <Spinner />
-    </div>
     <!-- spinner -->
     <div class="more-char-wrapper">
       <article
@@ -25,7 +22,6 @@
 
 <script>
 import CharacterTemplate from "@/components/CharacterTemplate.vue";
-import Spinner from "@/components/Spinner.vue";
 export default {
   name: "CharactersMoreList",
   props: {
@@ -35,7 +31,6 @@ export default {
   },
   components: {
     CharacterTemplate,
-    Spinner,
   },
   methods: {
     scrollToView() {

@@ -1,15 +1,15 @@
 <template>
   <div id="characters">
-    <div v-if="!character.name">
-      <Spinner />
+    <div v-if="loading">
+      <TheSpinner />
     </div>
     <div class="scrollTo" v-else>
       <CharacterInformation :character="character" />
+      <CharactersMoreList
+        @scrollToView="scrollToView"
+        :charactersByCategory="charactersByCategory"
+      />
     </div>
-    <CharactersMoreList
-      @scrollToView="scrollToView"
-      :charactersByCategory="charactersByCategory"
-    />
   </div>
 </template>
 
@@ -17,7 +17,7 @@
 import CharactersService from "@/models/CharactersService";
 import { CharacterInterface } from "@/models/Character";
 import Vue from "vue";
-import Spinner from "@/components/Spinner.vue";
+import TheSpinner from "@/components/TheSpinner.vue";
 import moment from "moment";
 import CharacterInformation from "@/components/CharacterInformation.vue";
 import CharactersMoreList from "@/components/CharactersMoreList.vue";
@@ -31,7 +31,7 @@ Vue.filter("formatDate", function(value: string) {
 export default Vue.extend({
   name: "Character",
   components: {
-    Spinner,
+    TheSpinner,
     CharacterInformation,
     CharactersMoreList,
   },
@@ -39,12 +39,28 @@ export default Vue.extend({
     return {
       character: {} as CharacterInterface,
       charactersByCategory: [] as CharacterInterface[],
-      charId: this.$route.params.char_id,
+      loading: true,
     };
   },
+  mounted() {
+    this.getCharacterById();
+  },
   methods: {
-    moment: function() {
+    moment() {
       return moment();
+    },
+    async getCharacterById() {
+      this.character = await CharactersService.getCharacterById(
+        this.$route.params.char_id
+      );
+      this.loading = false;
+      setTimeout(() => this.scrollToView(), 1);
+    },
+    async getThreeCharactersByCategory() {
+      this.charactersByCategory = await CharactersService.getThreeCharactersByCategory(
+        this.character.category
+      );
+      this.loading = false;
     },
     scrollToView() {
       const el = this.$el.querySelector(".scrollTo");
@@ -53,22 +69,14 @@ export default Vue.extend({
       }
     },
   },
-  async mounted() {
-    this.character = await CharactersService.getCharacterById(this.charId);
-  },
   watch: {
-    async character() {
-      this.charactersByCategory = await CharactersService.getThreeCharactersByCategory(
-        this.character.category
-      );
+    character() {
+      this.getThreeCharactersByCategory();
     },
-    $route: async function() {
-      this.character = await CharactersService.getCharacterById(
-        this.$route.params.char_id
-      );
+    $route() {
+      this.loading = true;
+      this.getCharacterById();
     },
   },
 });
 </script>
-
-<style lang="scss"></style>

@@ -6,8 +6,8 @@
       </button>
     </div>
     <!-- / button-w -->
-    <div v-if="this.loading">
-      <Spinner />
+    <div v-if="loading">
+      <TheSpinner />
     </div>
     <div v-else>
       <CharacterInformation :character="character" />
@@ -19,14 +19,14 @@
 import { CharacterInterface } from "@/models/Character";
 import moment from "moment";
 import Vue from "vue";
-import Spinner from "@/components/Spinner.vue";
+import TheSpinner from "@/components/TheSpinner.vue";
 import CharactersService from "@/models/CharactersService";
 import CharacterInformation from "@/components/CharacterInformation.vue";
 
 export default Vue.extend({
   name: "Random",
   components: {
-    Spinner,
+    TheSpinner,
     CharacterInformation,
   },
   data() {

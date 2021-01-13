@@ -1,8 +1,5 @@
 <template>
   <div id="charactersList">
-    <div v-if="characters.length === 0">
-      <Spinner />
-    </div>
     <section class="character-container">
       <CharacterListFilter :characters="characters" />
       <article
@@ -20,7 +17,6 @@
 
 <script lang="ts">
 import CharacterListFilter from "@/filters/CharacterListFilter.vue";
-import Spinner from "@/components/Spinner.vue";
 import CharacterTemplate from "@/components/CharacterTemplate.vue";
 
 export default {
@@ -32,7 +28,6 @@ export default {
   },
   components: {
     CharacterListFilter,
-    Spinner,
     CharacterTemplate,
   },
 };
