@@ -1,5 +1,6 @@
 @import "@/assets/styles/_variables.scss";
 
+/* C-padding */
 .c-padding {
   padding-left: 20px !important;
   padding-right: 20px !important;
@@ -11,14 +12,17 @@
   color: #fff;
   padding: 50px 0;
 
+  /* Footer__img */
   &__img {
     display: none;
   }
 
+  /* Footer__top-arrow */
   &__top-arrow {
     display: none;
   }
 
+  /* Footer__divider */
   &__divider {
     border: 0;
     border-bottom: 2px solid #272727;
@@ -34,6 +38,7 @@
   display: flex;
   justify-content: space-between;
 
+  /* Footer-top__logo */
   &__logo {
     display: none;
   }
@@ -45,15 +50,15 @@
   flex-wrap: wrap;
   flex-direction: column;
 
+  /* Footer-nav__item */
   &__item {
     font-family: Teko-Regular;
     font-size: 32px;
     text-transform: uppercase;
     transition: 200ms;
-  }
-
-  &__item:hover {
-    color: blue;
+    &:hover {
+      color: blue;
+    }
   }
 }
 

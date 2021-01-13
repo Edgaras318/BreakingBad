@@ -18,12 +18,14 @@
   font-size: 30px;
   width: 100%;
 
+  /* Sort-container */
   &__title {
     font-family: Teko-Regular;
     color: #a3a3a3;
     margin-right: 10px;
   }
 
+  /* Sort-container__select */
   &__select {
     font-family: Teko-Medium;
     font-size: 1rem;
@@ -40,12 +42,14 @@
     right: 0;
   }
 
+  /* Sort-container__placeholder */
   &__placeholder {
     font-family: Teko-Medium;
     font-size: 30px;
     border-bottom: 1px solid;
   }
 
+  /* Sort-container__icon */
   &__icon {
     margin-bottom: 7px;
     margin-left: 5px;
@@ -74,13 +78,17 @@
   .sort-container {
     font-size: 50px;
 
+    /* Sort-container__icon */
     &__icon {
       height: 17px;
     }
 
+    /* Sort-container__placeholder */
     &__placeholder {
       font-size: 50px;
     }
+
+    /* Sort-container__select */
     &__select {
       font-size: 50px;
     }

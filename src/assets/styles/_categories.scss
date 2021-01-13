@@ -4,6 +4,7 @@
   flex-direction: column;
   text-align: center;
 
+  /* Categories-container__button */
   &__button {
     cursor: pointer;
     height: 30vh;
@@ -16,6 +17,7 @@
     }
   }
 
+  /* Categories-container__title */
   &__title {
     font-family: Teko-Regular;
     font-size: 26vw;
@@ -31,10 +33,13 @@
 @media (min-width: 1280px) {
   /* Categories-container */
   .categories-container {
+    /* Categories-container__button */
     &__button {
       height: 30vh;
       width: 20vw;
     }
+
+    /* Categories-container__title */
     &__title {
       font-size: 10vw;
     }

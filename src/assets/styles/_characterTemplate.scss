@@ -2,23 +2,23 @@
 
 /* Character */
 .character {
-  a {
-    width: 280px;
-    margin: auto;
-  }
+  width: 280px;
+  margin: auto;
 
+  /* Character__img */
   &__img {
     object-fit: cover;
     width: 280px;
     height: 400px;
     object-position: 0 0;
     transition: transform 300ms;
+
+    &:hover {
+      transform: translateY(10px);
+    }
   }
 
-  &__img:hover {
-    transform: translateY(10px);
-  }
-
+  /* Character__label */
   &__label {
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -32,12 +32,19 @@
     }
   }
 
+  /* Character__title */
   &__title {
     font-family: Teko-Regular;
     font-size: 10vw;
     font-weight: 200;
     line-height: 1.1;
   }
+}
+
+/* Charcter-wrapper */
+.charcter-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Viewcase-container */
@@ -63,6 +70,7 @@
   .character {
     width: 50%;
 
+    /* Character__button */
     &__button {
       font-family: Arial, Helvetica, sans-serif;
       color: #1a18f7;
@@ -77,6 +85,8 @@
     &:hover &__button {
       transform: translateX(15px);
     }
+
+    /* Character__title */
     &__title {
       font-size: 5vw;
     }
@@ -87,11 +97,14 @@
 @media (min-width: 1024px) {
   /* Character */
   .character {
+    /* Character__title */
     &__title {
       font-size: 36px;
       margin-bottom: 15px;
     }
   }
+
+  /* Viewcase-container */
   .viewcase-container {
     display: flex;
   }
@@ -100,15 +113,13 @@
 @media (min-width: 1280px) {
   /* Character */
   .character {
+    /* Character__img */
     &__img {
       width: 560px;
       height: 600px;
     }
 
-    a {
-      width: 560px;
-    }
-
+    /* Character__title */
     &__title {
       font-size: 50px;
     }

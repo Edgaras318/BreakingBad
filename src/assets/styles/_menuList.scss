@@ -19,6 +19,7 @@
   transition: opacity 300ms cubic-bezier(0.37, 0.57, 0.09, 0.9);
   text-align: left;
 
+  /* MenuList__item */
   &__item {
     font-family: Teko-Regular;
     font-size: 13vw;
@@ -27,11 +28,13 @@
     text-align: right;
     animation: navBarOUTAnim 300ms cubic-bezier(0.41, 0.56, 0, 0.96) forwards;
 
+    /* MenuList--show */
     &--show {
       animation: navBarINAnim 300ms cubic-bezier(0.41, 0.56, 0, 0.96) forwards;
     }
   }
 
+  /* MenuList__icon */
   &__icon {
     width: 4vw;
     margin-bottom: 1.5vw;
@@ -42,11 +45,13 @@
     transition: all 500ms cubic-bezier(0.41, 0.61, 0.01, 0.93);
   }
 
+  /* MenuList__text MenuList__icon */
   &__text:hover &__icon {
     opacity: 1;
     transform: translateX(0);
   }
 
+  /* MenuList--show */
   &--show {
     opacity: 1;
     pointer-events: all;
@@ -90,10 +95,12 @@
 @media (min-width: 600px) {
   /* MenuList */
   .menuList {
+    /* MenuList__item */
     &__item {
       font-size: 80px;
     }
 
+    /* MenuList__icon */
     &__icon {
       width: 25px;
       margin-bottom: 8px;
@@ -115,6 +122,7 @@
 
   /* MenuList */
   .menuList {
+    /* MenuList__item */
     &__item {
       font-size: 70px;
     }
